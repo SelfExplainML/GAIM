@@ -15,6 +15,8 @@ from .smspline_bigspline import SMSplineRegressor as BIG_SMSplineRegressor
 
 from .mysim import SIMRegressor
 
+__all__ = ["AIMRegressor"]
+
 class AIMRegressor(BaseEstimator, RegressorMixin):
     def __init__(self, nterms=5, opt_level='high',
                  # params of splines

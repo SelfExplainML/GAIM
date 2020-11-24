@@ -27,6 +27,9 @@ except:
     utils = importr('utils')
     utils.install_packages('stats', repos='http://cran.us.r-project.org')
     stats = importr("stats")
+
+
+__all__ = ["PPRRegressor", "PPRClassifier"]
     
 
 class BasePPR(BaseEstimator, metaclass=ABCMeta):
