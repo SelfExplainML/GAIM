@@ -83,7 +83,7 @@ class BasePPR(BaseEstimator, metaclass=ABCMeta):
         projection_indices_ = reg[11]
         mu = int(reg[-3][4])
         
-        return projection_indices_[:,:mu]
+        return projection_indices_.reshape(-1,1) if mu==1 else projection_indices_[:,:mu]
     
     
     def decision_function(self, x):
@@ -135,9 +135,12 @@ class BasePPR(BaseEstimator, metaclass=ABCMeta):
         outer = gridspec.GridSpec(int(np.ceil(max_ids / cols_per_row)), cols_per_row, wspace=0.15, hspace=0.25)
 
         projection_indices_ = reg[11]
-        if projection_indices_.shape[1] > 0:
-            xlim_min = - max(np.abs(projection_indices_.min() - 0.1), np.abs(projection_indices_.max() + 0.1))
-            xlim_max = max(np.abs(projection_indices_.min() - 0.1), np.abs(projection_indices_.max() + 0.1))
+        
+        if len(projection_indices_.shape)==1:
+            projection_indices_ = projection_indices_.reshape(-1,1)
+        
+        xlim_min = - max(np.abs(projection_indices_.min() - 0.1), np.abs(projection_indices_.max() + 0.1))
+        xlim_max = max(np.abs(projection_indices_.min() - 0.1), np.abs(projection_indices_.max() + 0.1))
 
         for indice in range(max_ids):
 
