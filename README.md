@@ -46,7 +46,7 @@ clf.fit(x,y)
 ```python
 clf.visualize()
 ```
-![regsim](https://github.com/SelfExplainML/GAIM/master/examples/reg_sim.png)
+![regsim](https://github.com/SelfExplainML/GAIM/examples/reg_sim.png)
 
 ### Classification Case
 
@@ -82,4 +82,4 @@ clf.fit(x,y)
 ```python
 clf.visualize()
 ```
-![regsim](https://github.com/SelfExplainML/GAIM/master/examples/clf_sim.png)
+![regsim](https://github.com/SelfExplainML/GAIM/examples/clf_sim.png)
