@@ -9,7 +9,7 @@ A Python wrapper of R:Stats::PPR for Generalized Additive Index Modeling
 - pandas>=0.25.1
 - rpy2>=3.3.5
 - scikit-learn>=0.23.2
-- csaps==1.0.2
+- csaps>=1.0.2
 
 ```
 pip install git+https://github.com/SelfExplainML/StatsGAIM.git
@@ -46,7 +46,7 @@ clf.fit(x,y)
 ```python
 clf.visualize()
 ```
-![regsim](https://github.com/SelfExplainML/GAIM/blob/master/examples/reg_sim.png)
+![regsim](https://github.com/SelfExplainML/GAIM/blob/main/examples/reg_sim.png)
 
 ### Classification Case
 
@@ -82,4 +82,4 @@ clf.fit(x,y)
 ```python
 clf.visualize()
 ```
-![clfsim](https://github.com/SelfExplainML/GAIM/blob/master/examples/clf_sim.png)
+![clfsim](https://github.com/SelfExplainML/GAIM/blob/main/examples/clf_sim.png)
